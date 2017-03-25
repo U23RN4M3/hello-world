@@ -7,6 +7,7 @@ body {
     background: #222222;
     margin: 0 auto;
     max-width: 100%;
+    height: 2000px;
 }
 
 h1 {
@@ -25,19 +26,73 @@ h3 {
     font-weight:200;
 }
 
+/*
+div.collasped_nav_pane {
+    width:98%; 
+    margin:1%;
+}
+
 div.expanded_nav_pane {
     width:98%; 
     margin:1%;
 }
+
+/* Table one centered
 table#table1 {
+    z-index: 1;
     margin-left:auto; 
     margin-right:auto; 
-    margin-top: 100px;
+    margin-top: 300px;
     width:235px;
     border-collapse: collapse;
     box-shadow: .75px .75px 3px 1px #111111;
     border-style: hidden;
   }
+*/
+
+table#table1 {
+    z-index: 1;
+    margin-left:auto; 
+    margin-right:auto; 
+    margin-top: 300px;
+    width:235px;
+    border-collapse: collapse;
+    box-shadow: .75px .75px 3px 1px #111111;
+    border-style: hidden;
+    transition: width 10s ease-in;
+  }
+
+table#table1:hover {
+    z-index: 1;
+    margin-left:auto; 
+    margin-right:auto; 
+    margin-top: 300px;
+    width:235px;
+    border-collapse: collapse;
+    box-shadow: .75px .75px 3px 1px #111111;
+    border-style: hidden;
+    transition: width 10s ease-in;
+  }
+
+table#table2 {
+    float: right;
+    margin-left: 93%;
+    position: fixed;
+    margin-top: 8px;
+    width:50px;
+    border-collapse: collapse;
+    box-shadow: .75px .75px 3px 1px #111111;
+    border-style: hidden;
+    transition: width 10s ease-in;
+}
+
+/*table#table2:hover {
+    float: right;
+    margin-left: 75%;
+    box-shadow: .75px .75px 3px 1px #111111;
+    border-style: hidden;
+    width: 185px;
+}*/
 
 tr,td {
     color:#777777;
@@ -54,26 +109,21 @@ tr,td {
     background: -moz-linear-gradient(#333, yellow); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#333, #252525); /* Standard syntax */
     vertical-align: middle;
-    vi
 }
 
 table tr:first-child td {
-  border-top: 0;
+    border-top: 0;
 }
 table tr:last-child td {
-  border-bottom: 0;
+    border-bottom: 0;
 }
 table tr td:first-child,
 table tr td:first-child {
-  border-left: 0;
+    border-left: 0;
 }
 table tr td:last-child,
 table tr th:last-child {
-border-right: 0;
-}
-
-.icon {
-    
+    border-right: 0;
 }
 
 td a {
@@ -81,35 +131,61 @@ td a {
     /*text-decoration; none;*/
     display: block;
     padding: 10px;
+    text-decoration: none;
+}
+
+/* ADDING WIDTH:185; to hover will pop out sidenav*/
+
+tr:hover {
+    box-shadow: .75px .75px 3px 1px #111111;
 }
 
 td:hover { 
     background: #222222;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color:#BB2525;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:active {
+td:active {
     background: #222222;
 }
 
+td:hover a {
+    color:#BB2525;
+}
 
+td:visited a {
+    text-decoration: none;
+}
 
-p {
-    block: inline;
+td:active a {
+    background: #222222;
 }
 
 i {
     font-size:20px!important;
     margin-right: 15px;
+    margin-left: 15px;
+}
+
+td:hover i {
+    color:#BB2525;
+}
+
+hr {
+    display: inline-block;
+    width:5px;
+    margin-top:-10px;
+    margin-left: -10px;
+    height:40px;
+    position: absolute;
+    background: #333; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#333, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#333, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#333, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#333, #252525); /* Standard syntax */
+    border-width: 0;
+}
+
+
+td:hover hr {
+    background: #BB2525;
 }
